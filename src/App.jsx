@@ -1,8 +1,9 @@
 import React from 'react';
+import HelloWorld from './views/HelloWorld';
 
 function App() {
   return (
-    <h1 className="font-bold text-red">Hello, World!</h1>
+    <HelloWorld />
   );
 }
 
