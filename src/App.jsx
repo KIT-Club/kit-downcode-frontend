@@ -1,9 +1,9 @@
 import React from 'react';
-import HelloWorld from './views/HelloWorld';
+import HomepageDarkMode from './views/HomepageDarkMode';
 
 function App() {
   return (
-    <HelloWorld />
+    <HomepageDarkMode />
   );
 }
 

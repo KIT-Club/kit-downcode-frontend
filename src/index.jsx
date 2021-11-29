@@ -5,7 +5,7 @@ import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App className="bg-black" />
   </React.StrictMode>,
   document.getElementById('root'),
 );
