@@ -54,6 +54,12 @@ input:checked ~ .dot {
 .search-icon{
     top: 9.8px;
 }
+.w-96{
+    width: 485px; 
+}
+.h-9{
+    height: 37px;
+}
 .search-bar{
-    outline: solid 2px #DB5E5E;
+
 }
