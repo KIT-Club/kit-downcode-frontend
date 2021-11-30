@@ -1,14 +1,9 @@
-import React, { Fragment } from 'react';
-import Text from '../../components/Text';
-import Test from '../../components/test'
+import React from 'react';
+import Test from '../../components/Test/test';
 
 function HelloWorld() {
   return (
-    <Fragment>
-      <Text />
-      <Test />
-    </Fragment>
-    
+    <Test />
   );
 }
 
