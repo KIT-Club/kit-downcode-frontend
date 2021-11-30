@@ -3,11 +3,15 @@
 @tailwind utilities;
 body{
     background-color:#202124;
-    font-family: mullish;
+    font-family: mulish;
 }
 input:checked ~ .dot {
     transform: translateX(-100%);
     background-color: #4D4D4D
+    ;
+  }
+  input:checked ~ .notdot {
+    background-color: #DB5E5E
     ;
   }
 .textthis {
@@ -37,5 +41,19 @@ input:checked ~ .dot {
     text-align: center;
 }
 .footerText{
-    margin-top: 200px;
+    margin-top: 260px;
+}
+.text-blue-500 {
+    --tw-text-opacity: 1;
+    color: rgba(59, 130, 246, var(--tw-text-opacity));
+}
+.search-bar{
+    width: 485px;
+    height: 37px;
+}
+.search-icon{
+    top: 9.8px;
+}
+.search-bar{
+    outline: solid 2px #DB5E5E;
 }

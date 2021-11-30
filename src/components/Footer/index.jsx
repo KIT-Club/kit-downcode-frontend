@@ -3,10 +3,10 @@ import React from 'react';
 function Footer() {
   return (
     <div className="footerText">
-      <h1 className="text-white">
+      <h1 className="text-gray-1">
         A website made by members of
         {' '}
-        <a href="facebook.com" className="text-green">KMA Information Technology Club</a>
+        <a href="facebook.com" className="text-blue-500">KMA Information Technology Club</a>
       </h1>
     </div>
   );
