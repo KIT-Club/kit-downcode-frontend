@@ -1,9 +1,9 @@
 import React from 'react';
-import HomepageDarkMode from './views/HomepageDarkMode';
+import ResultGetLinkSucess from './views/ResultGetLinkSucess';
 
 function App() {
   return (
-    <HomepageDarkMode />
+    <ResultGetLinkSucess />
   );
 }
 
