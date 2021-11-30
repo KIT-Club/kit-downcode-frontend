@@ -14,6 +14,9 @@ module.exports = {
       },
       red: '#dB5e5e',
       green: '#5edb79',
+      blue: '#3053CE',
+      white: '#ffffff',
+      black: '#000000',
     },
   },
   variants: {

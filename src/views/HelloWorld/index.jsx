@@ -1,9 +1,19 @@
 import React from 'react';
-import Test from '../../components/test/test';
+import Logo from '../../components/Logo/Logo';
+import Input from '../../components/Input/Input';
+import Button from '../../components/ButtonCreate/buttonCreate';
+import Footer from '../../components/Footer/Footer';
+import Toogle from '../../components/Toogle/Toogle';
 
 function HelloWorld() {
   return (
-    <Test />
+    <div className="mt-48 relative">
+      <Toogle />
+      <Logo />
+      <Input />
+      <Button />
+      <Footer />
+    </div>
   );
 }
 
