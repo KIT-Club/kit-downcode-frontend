@@ -3,7 +3,7 @@ import React from 'react';
 function Toogle() {
   return (
     <div className="flex self-end mb-12 mr-4 mt-3">
-      <div className="ml-3 text-gray-700 font-medium textthis">
+      <div className="ml-3 text-gray-700 font-medium mr-6 text-white">
         Dark Mode?
       </div>
       <label

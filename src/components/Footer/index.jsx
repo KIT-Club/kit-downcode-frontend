@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer() {
   return (
-    <div className="footerText">
+    <div className="mt-72">
       <h1 className="text-gray-1">
         A website made by members of
         {' '}

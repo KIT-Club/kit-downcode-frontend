@@ -10,56 +10,14 @@ input:checked ~ .dot {
     background-color: #4D4D4D
     ;
   }
-  input:checked ~ .notdot {
+input:checked ~ .notdot {
     background-color: #DB5E5E
     ;
   }
-.textthis {
-    margin-right: 10px;
-    color: white;
-}
-.CornerRight {
-    position: absolute;
-    right: 15px;
-    margin-top: 15px;
-}
-.SiteCover {
-    width: 1920px;
-    height: 1980px;
-    background-color: #202124;
-}
-.ti-search {
-    margin-bottom: 50px;
-}
-.search-icon:hover {
-    color: rgb(126, 120, 120);
-}
-.SearchNav {
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.footerText{
-    margin-top: 260px;
-}
 .text-blue-500 {
     --tw-text-opacity: 1;
     color: rgba(59, 130, 246, var(--tw-text-opacity));
 }
-.search-bar{
-    width: 485px;
-    height: 37px;
-}
-.search-icon{
-    top: 9.8px;
-}
 .w-96{
     width: 485px; 
-}
-.h-9{
-    height: 37px;
-}
-.search-bar{
-
 }
