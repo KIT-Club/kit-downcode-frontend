@@ -5,7 +5,7 @@ function Footer() {
     <div className=" mb-10 mt-48 w-full flex justify-center">
       <p className="text-lg text-white font-normal">
         A website made by members of
-        <span className="text-blue"> KMA Infomation Technology Club</span>
+        <a href="https://www.facebook.com/kitclubKMA" className="text-blue"> KMA Infomation Technology Club</a>
       </p>
     </div>
   );
