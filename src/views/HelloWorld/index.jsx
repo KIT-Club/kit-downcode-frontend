@@ -7,7 +7,7 @@ import Toogle from '../../components/Toogle/Toogle';
 
 function HelloWorld() {
   return (
-    <div className="mt-48 relative">
+    <div className="mt-28 xl:mt-24">
       <Toogle />
       <Logo />
       <Input />
