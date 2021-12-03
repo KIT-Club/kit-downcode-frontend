@@ -18,6 +18,3 @@ input:checked ~ .notdot {
     --tw-text-opacity: 1;
     color: rgba(59, 130, 246, var(--tw-text-opacity));
 }
-.w-96{
-    width: 485px; 
-}
