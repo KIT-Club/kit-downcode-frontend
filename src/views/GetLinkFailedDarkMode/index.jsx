@@ -2,7 +2,7 @@ import React from 'react';
 import Toogle from '../../components/ToogleDarkMode';
 import Footer from '../../components/Footer';
 import Logo from '../../components/Logo';
-import SearchBar from '../../components/SearchBar';
+import SearchBar from '../../components/SearchBarFailed';
 import TextWarning from '../../components/TextWarning';
 
 function GetLinkFailedDarkMode() {
