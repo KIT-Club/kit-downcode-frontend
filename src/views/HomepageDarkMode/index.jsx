@@ -4,7 +4,7 @@ import Footer from '../../components/Footer';
 import SearchBar from '../../components/SearchBar';
 import Logo from '../../components/Logo';
 import Text from '../../components/Text';
-import SearchBarSuccess from '../../components/SearchBarSuccess';
+import SearchBarSuccess from '../../components/SearchBarSucess';
 
 function HomepageDarkMode() {
   return (
