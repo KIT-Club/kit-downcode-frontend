@@ -4,10 +4,12 @@ import Input from '../../components/Input/Input';
 import Button from '../../components/ButtonCreate/buttonCreate';
 import Footer from '../../components/Footer/Footer';
 import Toogle from '../../components/Toogle/Toogle';
+import useDarkMode from '../../components/DarkMode/DarkMode';
 
 function HelloWorld() {
+  useDarkMode();
   return (
-    <div className="mt-28 xl:mt-24">
+    <div>
       <Toogle />
       <Logo />
       <Input />
