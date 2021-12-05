@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 body{
-    background-color:#202124;
     font-family: mulish;
 }
 input:checked ~ .dot {
@@ -17,4 +16,7 @@ input:checked ~ .notdot {
 .text-blue-500 {
     --tw-text-opacity: 1;
     color: rgba(59, 130, 246, var(--tw-text-opacity));
+}
+.fillBlack {
+  fill: #0000;
 }
