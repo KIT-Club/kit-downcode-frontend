@@ -3,7 +3,6 @@ import Toogle from '../../components/ToogleDarkMode';
 import Footer from '../../components/Footer';
 import Logo from '../../components/Logo';
 import SearchBar from '../../components/SearchBar';
-import Text from '../../components/Text';
 
 function ResultGetLinkSucess() {
   return (
@@ -11,7 +10,6 @@ function ResultGetLinkSucess() {
       <Toogle />
       <Logo />
       <SearchBar />
-      <Text />
       <Footer />
     </div>
   );

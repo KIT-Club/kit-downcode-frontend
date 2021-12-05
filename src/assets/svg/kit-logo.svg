@@ -4,7 +4,12 @@
 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
  width="1419.000000pt" height="1408.000000pt" viewBox="0 0 1419.000000 1408.000000"
  preserveAspectRatio="xMidYMid meet">
-
+path {
+    fill: black;
+}
+ @media (prefers-color-scheme: dark) {
+    path { fill: white; }
+}
 <g transform="translate(0.000000,1408.000000) scale(0.100000,-0.100000)"
 fill="#fff" stroke="none">
 <path d="M0 7040 l0 -7040 7095 0 7095 0 0 7040 0 7040 -7095 0 -7095 0 0
