@@ -3,7 +3,7 @@ import ResultGetLinkSucess from './views/ResultGetLinkSucess';
 
 function App() {
   return (
-    <ResultGetLinkSucess />
+    <ResultGetLinkSucess className="bodyman" />
   );
 }
 

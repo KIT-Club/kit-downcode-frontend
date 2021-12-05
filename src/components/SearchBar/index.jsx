@@ -30,7 +30,7 @@ function SearchBar() {
               <SearchIcon onClick={() => {
                 console.log('Click');
                 addData();
-                setCode('');
+                setCode(code);
               }}
               />
               {' '}
