@@ -13,13 +13,13 @@ function Toogle() {
           colorTheme === 'light'
             ? (
               <>
-                <div className="h-6 w-6 rounded-full bg-gray-4 absolute right-0 top-1" />
+                <div className="h-6 w-6 rounded-full bg-gray-4 absolute right-0" />
                 <div className="h-4 w-10  rounded-full bg-green" />
               </>
             )
             : (
               <>
-                <div className="h-6 w-6 rounded-full bg-gray-4 absolute left-0 top-0" />
+                <div className="h-6 w-6 rounded-full bg-gray-4 absolute left-0" />
                 <div className="h-4 w-10 rounded-full bg-red" />
               </>
             )
