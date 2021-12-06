@@ -9,7 +9,7 @@
             fill: #303134;
         }
         @media (prefers-color-scheme: dark) {
-            path { fill: white; }
+            path { fill: #fff; }
         }
     </style>
 
