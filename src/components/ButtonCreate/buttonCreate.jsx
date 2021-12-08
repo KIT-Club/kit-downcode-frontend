@@ -1,10 +1,13 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 
 // eslint-disable-next-line react/prop-types
-function Button({ links, setCreatedCodes }) {
+// eslint-disable-next-line no-unused-vars
+function Button({ setShow, links, setCreatedCodes }) {
   const handleCreate = () => {
     // eslint-disable-next-line react/prop-types
     setCreatedCodes(links);
+    setShow(false);
   };
   return (
     <div className="mt-5 w-full flex flex-col items-center">

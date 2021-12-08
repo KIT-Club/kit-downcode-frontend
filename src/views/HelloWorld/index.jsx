@@ -11,11 +11,13 @@ function HelloWorld() {
   const [inputLink, setInputLink] = useState('');
   const [links, setLinks] = useState([]);
   const [createdCodes, setCreatedCodes] = useState([]);
+  const [show, setShow] = useState(true);
   return (
     <div>
       <Toogle />
       <Logo />
       <Input
+        show={show}
         inputLink={inputLink}
         setInputLink={setInputLink}
         links={links}
@@ -24,6 +26,8 @@ function HelloWorld() {
         setCreated={setCreatedCodes}
       />
       <Button
+        show={show}
+        setShow={setShow}
         inputLink={inputLink}
         setInputLink={setInputLink}
         links={links}

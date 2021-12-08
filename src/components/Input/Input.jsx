@@ -1,12 +1,13 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Clipboard from '../../assets/svg/clipboard.svg';
 import trash from '../../assets/svg/trash.svg';
 import plus from '../../assets/svg/plus-circle.svg';
 import Suggest from '../SuggestionBoard/suggest';
 // eslint-disable-next-line object-curly-newline
-function Input({ inputLink, setInputLink, links, setLinks, created }) {
+function Input({ show, inputLink, setInputLink, links, setLinks, created }) {
   const [suggest, setSuggest] = useState(false);
+  const textCopy = useRef();
   const handleClick = (e) => {
     e.preventDefault();
     if (inputLink === '') {
@@ -32,11 +33,14 @@ function Input({ inputLink, setInputLink, links, setLinks, created }) {
     setLinks(links.filter((li) => li.id !== link.id));
   };
 
-  const handleCopy = (el) => {
-    navigator.clipboard.writeText(el.text);
+  const handleCopy = async (el) => {
+    await navigator.clipboard.writeText(el.text);
+    textCopy.current.innerText = 'Copy success';
   };
   return (
     <div className="flex flex-col-reverse justify-center items-center mt-10">
+      {show
+      && (
       <div className="w-full flex flex-col items-center">
         <form className="mt-4 w-3/4 mx-2 h-12 rounded-lg dark:bg-gray-5 bg-gray-1 flex justify-center items-center lg:w-1/2 lg:mt-5">
           <input type="text" value={inputLink} onChange={(e) => handleChange(e)} placeholder="Add more link" className="rounded-lg dark:bg-gray-5 bg-gray-1 dark:placeholder-gray-2 pl-5 dark:placeholder-opacity-20 placeholder-gray-5 placeholder-opacity-70 text-base outline-none w-full dark:text-gray-2 text-gray-5" />
@@ -51,6 +55,7 @@ function Input({ inputLink, setInputLink, links, setLinks, created }) {
           />
         )}
       </div>
+      )}
       {
         // eslint-disable-next-line react/prop-types
         links.map((link) => (
@@ -67,7 +72,7 @@ function Input({ inputLink, setInputLink, links, setLinks, created }) {
         created.map((el) => (
           <div key={el.id} className="mt-4 w-3/4 mx-2 h-12 rounded-lg dark:bg-gray-5 bg-gray-1 flex justify-between items-center lg:w-1/2 lg:mt-5">
             <div className="pl-5 flex flex-col py-2">
-              <p className="text-lg dark:text-gray-2 text-gray-5 text-opacity-70 leading-4 font-bold">483171635</p>
+              <p ref={textCopy} className="text-lg dark:text-gray-2 text-gray-5 text-opacity-70 leading-4 font-bold">483171635</p>
               <p className="dark:text-gray-2 text-gray-5 text-opacity-70 text-sm">{el.text}</p>
             </div>
             <button onClick={() => handleCopy(el)} type="button" className="pr-5">
