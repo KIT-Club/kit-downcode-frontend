@@ -6,6 +6,7 @@ function Toogle() {
   const [userClick, setClick] = useState(true);
   function changeLogo() {
     if (userClick) {
+      document.documentElement.classList.add('dark');
       return logo;
     }
 
@@ -14,7 +15,7 @@ function Toogle() {
   return (
     <>
       <div className="flex self-end mb-12 mr-4 mt-3">
-        <div className="ml-3 mr-3 font-medium mr-6v dark:text-black text-gray-1 text-sm md:text-base">
+        <div className="ml-3 mr-3 font-medium mr-6v text-gray-6 dark:text-gray-1 text-sm md:text-base">
           Dark Mode?
         </div>
         <label
@@ -28,9 +29,9 @@ function Toogle() {
               className="sr-only"
               onClick={() => {
                 if (userClick) {
-                  document.documentElement.classList.add('dark');
-                } else {
                   document.documentElement.classList.remove('dark');
+                } else {
+                  document.documentElement.classList.add('dark');
                 }
                 setClick(!userClick);
               }}
@@ -42,12 +43,12 @@ function Toogle() {
           </div>
         </label>
       </div>
-      <div className="flex justify-center items-center mt-40">
+      <div className="flex justify-center items-center mt-48">
         <div>
           <img className="max-h-52 max-w-52a md:w-32 lg:w-36 w-28" src={changeLogo()} alt="LogoKit" />
         </div>
         <div>
-          <p className="md:text-5xl font-normal ml-10  dark:text-black text-gray-1 lg:text-6xl text-4xl">KIT Downcode</p>
+          <p className="md:text-5xl font-normal ml-10  text-black dark:text-gray-1 lg:text-6xl text-4xl">KIT Downcode</p>
         </div>
       </div>
     </>

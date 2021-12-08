@@ -10,16 +10,14 @@ input:checked ~ .dot {
     ;
   }
 input:checked ~ .notdot {
-    background-color: #DB5E5E
-    ;
+    --tw-bg-opacity: 1;
+    background-color: #DB5E5E;
   }
 .text-blue-500 {
     --tw-text-opacity: 1;
     color: rgba(59, 130, 246, var(--tw-text-opacity));
 }
-.fillBlack {
-  fill: #0000;
-}
+
 .outline-red{
   outline: #DB5E5E solid;
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import Toogle from '../../components/ToogleDarkMode';
 import Footer from '../../components/Footer';
-// import Logo from '../../components/Logo';
 import SearchBar from '../../components/SearchBar';
 import AddLinkBar from '../../components/AddLinkBar';
 import ShowLinkBar from '../../components/ShowLinkBar';

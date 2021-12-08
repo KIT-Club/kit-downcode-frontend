@@ -2,7 +2,7 @@ import React from 'react';
 
 function Text() {
   return (
-    <p className="dark:text-black text-gray-1 mt-4 text-xs md:text-base">
+    <p className="text-black dark:text-gray-1 mt-4 text-xs md:text-base">
       Or your can create your
       <a
         onClick={() => {
