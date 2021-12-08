@@ -4,7 +4,17 @@ function Text() {
   return (
     <p className="dark:text-black text-gray-1 mt-4 text-xs md:text-base">
       Or your can create your
-      <a href="facebook.com" className="text-blue-500"> code</a>
+      <a
+        onClick={() => {
+          console.log('user wanna create');
+        }}
+        href="##"
+        className="text-blue-500"
+      >
+        {' '}
+        code
+
+      </a>
     </p>
   );
 }

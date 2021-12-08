@@ -6,16 +6,16 @@ import TextWarning from '../TextWarning';
 
 function SearchBar() {
   const [code, setCode] = useState('');
-  const [data, addCode] = useState({ code: '123', link: 'facebook.com' });
+  const [data, addCode] = useState([{ code: '123', link: 'facebook.com' }]);
   const [show, setShow] = useState(false);
   const [showText, setShowText] = useState(true);
   const addData = () => {
-    if (code === data.code) {
+    if (code === data[0].code) {
       setShow(true);
     } else {
       setShowText(false);
       document.getElementById('search-bar').classList.add('outline-red');
-      addCode({ code, link: 'hello' });
+      addCode((prev) => [...prev, { code, link: 'Hello.com' }]);
     }
   };
   return (
@@ -30,6 +30,7 @@ function SearchBar() {
               <SearchIcon onClick={() => {
                 console.log('Click');
                 addData();
+                console.log(data);
                 setCode(code);
               }}
               />

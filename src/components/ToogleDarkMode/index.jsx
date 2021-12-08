@@ -42,7 +42,7 @@ function Toogle() {
           </div>
         </label>
       </div>
-      <div className="flex justify-center items-center mt-24">
+      <div className="flex justify-center items-center mt-40">
         <div>
           <img className="max-h-52 max-w-52a md:w-32 lg:w-36 w-28" src={changeLogo()} alt="LogoKit" />
         </div>
