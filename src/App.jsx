@@ -1,9 +1,9 @@
 import React from 'react';
-import HelloWorld from './views/HelloWorld';
+import Home from './views/Home';
 
 function App() {
   return (
-    <HelloWorld />
+    <Home />
   );
 }
 
