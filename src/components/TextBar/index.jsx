@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 
-function SearchCodeBar({
+function TextBar({
   handleOnClick, handleOnKeyDown, icon, link,
 }) {
   const inputRef = useRef();
@@ -31,15 +31,15 @@ function SearchCodeBar({
   );
 }
 
-SearchCodeBar.propTypes = {
+TextBar.propTypes = {
   handleOnClick: PropTypes.func.isRequired,
   handleOnKeyDown: PropTypes.func.isRequired,
   icon: PropTypes.element.isRequired,
   link: PropTypes.string,
 };
 
-SearchCodeBar.defaultProps = {
+TextBar.defaultProps = {
   link: '',
 };
 
-export default SearchCodeBar;
+export default TextBar;

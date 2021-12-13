@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import Logo from '../../components/Logo';
 import Toggle from '../../components/Toggle';
-import SearchCodeBar from '../../components/SearchCodeBar';
+import TextBar from '../../components/TextBar';
 import Footer from '../../components/Footer';
 import SearchIcon from '../../assets/icons/SearchIcon';
 import Clipboard from '../../assets/icons/Clipboard';
 import TipsText from '../../components/TipsText';
 
 function Home() {
-  const [code, setCode] = useState('');
-  const [response, setResponse] = useState();
-  const [resultBar, setResultBar] = useState('');
-  const [tipsText, setTipsText] = useState(TipsText(true));
+  const [code, setCode] = useState(''); // Code from input
+  const [response, setResponse] = useState(); // Response from API
+  const [resultBar, setResultBar] = useState(''); // Result bar JSX state
+  const [tipsText, setTipsText] = useState(TipsText(true)); // Tips text JSX state
 
   // Click Search button
   const handleOnClickSearch = (inputRef) => {
@@ -24,7 +24,9 @@ function Home() {
   };
 
   const handleOnClickClipboard = async (inputRef) => {
+    // Using clipboard API
     if (navigator.clipboard) await navigator.clipboard.writeText(inputRef.current.value);
+    // Fallback function using old method
     else {
       inputRef.current.select();
       document.execCommand('copy');
@@ -43,7 +45,7 @@ function Home() {
 
   useEffect(() => {
     const jsx = (
-      <SearchCodeBar
+      <TextBar
         handleOnClick={handleOnClickClipboard}
         handleOnKeyDown={() => {}}
         icon={<Clipboard />}
@@ -66,7 +68,7 @@ function Home() {
     <div className="flex flex-col items-center space-y-3">
       <Toggle />
       <Logo />
-      <SearchCodeBar
+      <TextBar
         handleOnClick={handleOnClickSearch}
         handleOnKeyDown={handleOnKeyDown}
         icon={<SearchIcon />}

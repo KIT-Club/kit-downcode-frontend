@@ -4,7 +4,7 @@ import KitLogo from '../../assets/icons/KitLogo';
 
 function Logo() {
   return (
-    <div className="flex justify-center items-center mt-12 md:mt-24 p-10">
+    <div className="flex justify-center items-center mt-12 md:mt-24 p-5 md:p-10">
       <div>
         <KitLogo />
       </div>
