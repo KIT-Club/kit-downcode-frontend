@@ -33,7 +33,7 @@ function Home() {
     }
   };
 
-  useEffect(() => {
+  useEffect(() => { // Validate code
     // TODO: Send code to the API
     // Mock data
     if (code === '123') {
@@ -43,7 +43,7 @@ function Home() {
     }
   }, [code]);
 
-  useEffect(() => {
+  useEffect(() => { // Return query result
     const jsx = (
       <TextBar
         handleOnClick={handleOnClickClipboard}
@@ -75,7 +75,6 @@ function Home() {
       />
       {resultBar}
       {tipsText}
-      {/* {response && response.error ?  : <TipsText isValidCode /> } */}
       <Footer />
     </div>
   );
