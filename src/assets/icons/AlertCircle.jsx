@@ -3,14 +3,13 @@ import React from 'react';
 function AlertCircle() {
   return (
     <svg
-      width="24"
-      height="24"
+      height={24}
+      width={24}
       fill="none"
-      stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth="2"
-      className="mt-4 mr-2"
+      className="mr-2 stroke-current text-red"
       viewBox="0 0 24 24"
     >
       <circle cx="12" cy="12" r="10" />
