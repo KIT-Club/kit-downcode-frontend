@@ -24,7 +24,11 @@ function Home() {
   };
 
   const handleOnClickClipboard = async (inputRef) => {
-    await navigator.clipboard.writeText(inputRef.current.value);
+    if (navigator.clipboard) await navigator.clipboard.writeText(inputRef.current.value);
+    else {
+      inputRef.current.select();
+      document.execCommand('copy');
+    }
   };
 
   useEffect(() => {
