@@ -3,8 +3,8 @@ import React from 'react';
 function AlertCircle() {
   return (
     <svg
-      height={24}
-      width={24}
+      height="24"
+      width="24"
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"
