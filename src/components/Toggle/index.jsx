@@ -7,6 +7,7 @@ export default function Toggle() {
   useLayoutEffect(() => {
     const root = window.document.documentElement;
     if (context.darkMode === true) root.classList.add('dark');
+    window.localStorage.setItem('darkMode', `${context.darkMode}`);
   }, []);
 
   return (

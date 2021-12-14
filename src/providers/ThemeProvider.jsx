@@ -3,7 +3,14 @@ import PropTypes from 'prop-types';
 import ThemeContext from '../contexts';
 
 function ThemeProvider({ children }) {
-  const preferDark = window.localStorage.getItem('darkMode') === 'true' ?? window.matchMedia('(prefers-color-scheme: dark)').matches;
+  let preferDark;
+
+  if (!window.localStorage.getItem('darkMode')) {
+    preferDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  } else {
+    preferDark = window.localStorage.getItem('darkMode');
+  }
+
   const [darkMode, setDarkMode] = useState(preferDark);
   const root = window.document.documentElement;
 
