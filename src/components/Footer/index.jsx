@@ -5,7 +5,7 @@ import DiscordIcon from '../../assets/icons/DiscordIcon';
 
 export default function Footer() {
   return (
-    <div className="flex absolute bottom-4 z-0 text-center overflow-auto p-5 pb-1 space-x-7 text-gray-4 dark:text-gray-2">
+    <div className="flex md:absolute md:bottom-4 z-0 text-center overflow-auto p-5 pb-1 space-x-7 text-gray-4 dark:text-gray-2">
       <a
         href="https://facebook.com/kitclubKMA"
         target="_blank"
