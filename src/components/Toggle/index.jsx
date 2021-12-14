@@ -1,5 +1,6 @@
 import React, { useLayoutEffect, useContext } from 'react';
 import ThemeContext from '../../contexts';
+import ThemeIcon from '../../assets/icons/ThemeIcon';
 
 export default function Toggle() {
   const context = useContext(ThemeContext);
@@ -13,8 +14,8 @@ export default function Toggle() {
   return (
     <>
       <div className="flex self-end mb-12 mr-4 mt-3">
-        <div className="ml-3 mr-3 font-medium mr-6v text-gray-6 dark:text-gray-1 text-sm md:text-base">
-          Dark Mode?
+        <div className="mr-3 font-medium text-sm md:text-base">
+          <ThemeIcon />
         </div>
         <label
           htmlFor="toggleA"

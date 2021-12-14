@@ -5,10 +5,10 @@ import ThemeContext from '../contexts';
 function ThemeProvider({ children }) {
   let preferDark;
 
-  if (!window.localStorage.getItem('darkMode')) {
+  if (window.localStorage.getItem('darkMode') === null) {
     preferDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   } else {
-    preferDark = window.localStorage.getItem('darkMode');
+    preferDark = window.localStorage.getItem('darkMode') === 'true';
   }
 
   const [darkMode, setDarkMode] = useState(preferDark);
