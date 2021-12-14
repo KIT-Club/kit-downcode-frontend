@@ -6,7 +6,7 @@ function TipsText(isValidCode) {
     return (
       <div className="flex">
         <AlertCircle />
-        <p className="text-red mt-4 text-xs md:text-base">
+        <p className="text-red text-xs md:text-base">
           Your code is invalid, please try another, or your can create a
           {' '}
           <a href="#href" className="text-blue hover:underline">
@@ -17,7 +17,7 @@ function TipsText(isValidCode) {
     );
   }
   return (
-    <p className="text-black dark:text-gray-1 mt-4 text-xs md:text-base">
+    <p className="text-black dark:text-gray-1 text-xs md:text-base">
       Or your can create your
       {' '}
       <a href="#href" className="text-blue hover:underline">code</a>
