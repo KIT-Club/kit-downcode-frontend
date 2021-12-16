@@ -4,9 +4,9 @@ import AlertCircle from '../../assets/icons/AlertCircle';
 function TipsText(isValidCode) {
   if (!isValidCode) {
     return (
-      <div className="flex justify-center items-center px-4">
+      <div className="flex justify-center items-center px-5 text-justify">
         <AlertCircle />
-        <p className="text-red text-xs md:text-base">
+        <p className="text-red text-sm md:text-base">
           Your code is invalid, please try another, or you can generate a
           {' '}
           <a href="#href" className="text-blue hover:underline">
