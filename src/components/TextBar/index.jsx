@@ -17,7 +17,7 @@ function TextBar({
               disabled={link !== ''}
               type="text"
               pattern="[0-9]*"
-              className=""
+              className="input__home"
               placeholder="Your code here..."
               onKeyDown={(e) => handleOnKeyDown(e, inputRef)}
             />
