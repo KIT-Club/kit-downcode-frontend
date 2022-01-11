@@ -66,7 +66,7 @@ function Home() {
   }, [response]);
 
   return (
-    <div className="flex flex-col items-center space-y-3">
+    <div className="flex flex-col items-center space-y-5">
       <Toggle />
       <Logo />
       <TextBar
