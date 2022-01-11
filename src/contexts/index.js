@@ -1,3 +1,4 @@
 import ThemeContext from './ThemeContext';
+import LinkListContext from './LinkListContext';
 
-export { ThemeContext as default };
+export { ThemeContext, LinkListContext };

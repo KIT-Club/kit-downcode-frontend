@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import ThemeContext from '../contexts';
+import { ThemeContext } from '../contexts';
 
 function ThemeProvider({ children }) {
   let preferDark;

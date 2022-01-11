@@ -15,7 +15,7 @@ function TextBar({
               ref={inputRef}
               defaultValue={link}
               disabled={link !== ''}
-              type="text"
+              type="link"
               pattern="[0-9]*"
               className="input__home"
               placeholder="Your code here..."

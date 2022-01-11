@@ -5,13 +5,13 @@ import TextBar from '../../components/TextBar';
 import Footer from '../../components/Footer';
 import SearchIcon from '../../assets/icons/SearchIcon';
 import Clipboard from '../../assets/icons/Clipboard';
-import TipsText from '../../components/TipsText';
+import AlertCircle from '../../assets/icons/AlertCircle';
 
 function Home() {
   const [code, setCode] = useState(''); // Code from input
   const [response, setResponse] = useState(); // Response from API
   const [resultBar, setResultBar] = useState(''); // Result bar JSX state
-  const [tipsText, setTipsText] = useState(TipsText(true)); // Tips text JSX state
+  const [isValidCode, setIsValidCode] = useState(true); // Tips link JSX state
 
   // Click Search button
   const handleOnClickSearch = (inputRef) => {
@@ -56,10 +56,10 @@ function Home() {
     if (response) {
       if (response.error) {
         setResultBar();
-        setTipsText(TipsText(false));
+        setIsValidCode(false);
       } else {
         setResultBar(jsx);
-        setTipsText(TipsText(true));
+        setIsValidCode(true);
       }
     }
   }, [response]);
@@ -74,7 +74,28 @@ function Home() {
         icon={<SearchIcon />}
       />
       {resultBar}
-      {tipsText}
+      {
+        isValidCode
+          ? (
+            <p className="text-black dark:text-gray-1 text-xs md:text-base">
+              Or your can generate
+              {' '}
+              <a href="#href" className="text-blue hover:underline">code</a>
+            </p>
+          )
+          : (
+            <div className="flex justify-center items-center px-5 text-justify">
+              <AlertCircle />
+              <p className="text-red text-sm md:text-base">
+                Your code is invalid, please try another, or you can generate a
+                {' '}
+                <a href="#href" className="text-blue hover:underline">
+                  code
+                </a>
+              </p>
+            </div>
+          )
+      }
       <Footer />
     </div>
   );

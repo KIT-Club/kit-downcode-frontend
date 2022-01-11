@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import ThemeContext from '../../contexts';
+import { ThemeContext } from '../../contexts';
 
 function ThemeIcon() {
   const context = useContext(ThemeContext);

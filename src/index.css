@@ -23,3 +23,28 @@ input:checked ~ .notdot {
     --tw-bg-opacity: 1;
     background-color: #DB5E5E;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background: #1d1d1d;
+    border-radius: 1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #1d1d1d;
+    height: 1px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

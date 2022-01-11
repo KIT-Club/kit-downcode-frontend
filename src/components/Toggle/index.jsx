@@ -1,5 +1,5 @@
 import React, { useLayoutEffect, useContext } from 'react';
-import ThemeContext from '../../contexts';
+import { ThemeContext } from '../../contexts';
 import ThemeIcon from '../../assets/icons/ThemeIcon';
 
 export default function Toggle() {
