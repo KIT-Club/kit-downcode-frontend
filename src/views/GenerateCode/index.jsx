@@ -1,4 +1,5 @@
 import React, { useContext, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import Logo from '../../components/Logo';
 import Toggle from '../../components/Toggle';
 import Footer from '../../components/Footer';
@@ -42,7 +43,9 @@ function GenerateCode() {
       <p className="text-black dark:text-gray-1 text-xs md:text-base">
         Or your can
         {' '}
-        <a href="#href" className="text-blue hover:underline">get a link</a>
+        <Link to="/" className="text-blue hover:underline">
+          get a link
+        </Link>
       </p>
       <LinkList list={context.linkItems} />
       <GenerateCodeButton />

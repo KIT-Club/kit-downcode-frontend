@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Logo from '../../components/Logo';
 import Toggle from '../../components/Toggle';
 import TextBar from '../../components/TextBar';
@@ -80,7 +81,7 @@ function Home() {
             <p className="text-black dark:text-gray-1 text-xs md:text-base">
               Or your can generate
               {' '}
-              <a href="#href" className="text-blue hover:underline">code</a>
+              <Link to="/generate" className="text-blue hover:underline">code</Link>
             </p>
           )
           : (
@@ -89,9 +90,9 @@ function Home() {
               <p className="text-red text-sm md:text-base">
                 Your code is invalid, please try another, or you can generate a
                 {' '}
-                <a href="#href" className="text-blue hover:underline">
+                <Link to="/generate" className="text-blue hover:underline">
                   code
-                </a>
+                </Link>
               </p>
             </div>
           )
