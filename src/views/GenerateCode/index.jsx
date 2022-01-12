@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../../components/Logo';
 import Toggle from '../../components/Toggle';
@@ -18,6 +18,10 @@ function GenerateCode() {
     context.add({ link: currentValue });
     inputRef.current.value = '';
   };
+
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
 
   return (
     <div className="flex flex-col items-center space-y-5">
