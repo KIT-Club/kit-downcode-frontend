@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
+import { toast } from 'react-toastify';
 import TrashIcon from '../../assets/icons/TrashIcon';
 import { LinkListContext } from '../../contexts';
 import Clipboard from '../../assets/icons/Clipboard';
@@ -12,17 +13,24 @@ function LinkItem({ code, link }) {
   };
 
   const handleOnClickClipboard = async () => {
+    let success = true;
+    try {
     // Using clipboard API
-    if (navigator.clipboard) await navigator.clipboard.writeText(code);
-    // Fallback function using old method
-    else {
-      const codeElement = document.getElementById('code');
-      const input = document.createElement('textarea');
-      input.value = codeElement.textContent;
-      document.body.appendChild(input);
-      input.select();
-      document.execCommand('copy');
-      input.remove();
+      if (navigator.clipboard) await navigator.clipboard.writeText(code);
+      // Fallback function using old method
+      else {
+        const codeElement = document.getElementById('code');
+        const input = document.createElement('textarea');
+        input.value = codeElement.textContent;
+        document.body.appendChild(input);
+        input.select();
+        success = document.execCommand('copy');
+        input.remove();
+        if (!success) throw new Error('Unable to copy to clipboard');
+      }
+      toast.success('Copied to clipboard');
+    } catch (err) {
+      toast.error(err.message);
     }
   };
 

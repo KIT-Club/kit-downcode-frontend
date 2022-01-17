@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import Logo from '../../components/Logo';
 import Toggle from '../../components/Toggle';
 import TextBar from '../../components/TextBar';
@@ -25,12 +26,19 @@ function Home() {
   };
 
   const handleOnClickClipboard = async (inputRef) => {
+    let success = true;
+    try {
     // Using clipboard API
-    if (navigator.clipboard) await navigator.clipboard.writeText(inputRef.current.value);
-    // Fallback function using old method
-    else {
-      inputRef.current.select();
-      document.execCommand('copy');
+      if (navigator.clipboard) await navigator.clipboard.writeText(inputRef.current.value);
+      // Fallback function using old method
+      else {
+        inputRef.current.select();
+        success = document.execCommand('copy');
+        if (!success) throw new Error('Unable to copy to clipboard');
+      }
+      toast.success('Copied to clipboard');
+    } catch (err) {
+      toast.error(err.message);
     }
   };
 
